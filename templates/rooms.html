@@ -1,0 +1,117 @@
+<html></html>
+
+    <head>
+        <title>Rooms</title>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet"> 
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    </head>
+
+
+    <body style="font-family: 'Montserrat', sans-serif; background-image: url(static/images/background.jpg); background-repeat: no-repeat; background-size: cover;">  
+        <div style="width: 1300px; display: flex; justify-content: center;" class="main-content">
+            <table style="width: 915px; background-color: white;">
+
+                <!--1-->
+                <tr>
+                    <td style="width: 915px; height: 250px; background-image: url('static/images/logo other.png'); background-size: cover; background-position: center;">
+                        <div style="display: flex; justify-content: space-around;">
+                            <button type="button" class="btn btn-info" style="font-weight: bold; width: 120px;" onclick="window.location.href='index';">На головну</button>
+                            <button type="button" class="btn btn-info" style="font-weight: bold; width: 120px;" onclick="window.location.href='rooms';">Номери</button>
+                            <button type="button" class="btn btn-info" style="font-weight: bold; width: 120px;" onclick="window.location.href='story';">Історія</button>
+                            <button type="button" class="btn btn-info" style="font-weight: bold; width: 120px;" onclick="window.location.href='contacts';">Контакти</button>
+                        </div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <div style="display: flex; justify-content: space-around;">
+                            <button type="button" class="btn btn-info" style="font-weight: bold; width: 300px; height: 50px;" onclick="window.location.href='https://www.youtube.com/watch?v=5hPhHJ9hwo0&ab_channel=JamieandKevGoTravelling';">Тур по кімнатам готелю</button>
+                       </div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td style="background-image: url('static/images/backbook.jpg'); color: white; font-weight: bold; text-shadow: 2px 2px 0px black,-1px -1px 0px black,1px -1px 0px black,-1px 1px 0px black; padding: 20px;">
+                
+                        <h1 style="text-align: center;">Бронювання номерів</h1>
+                
+                        <form action="/rooms" method="POST">
+                            <div class="mb-3">
+                                <label for="name" class="form-label">ПІБ</label>
+                                <input type="text" class="form-control" id="name" name="name" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="phone" class="form-label">Номер телефону</label>
+                                <input type="tel" class="form-control" id="phone" name="phone" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Електронна пошта</label>
+                                <input type="email" class="form-control" id="email" name="email" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="checkin_date" class="form-label">Дата заселення</label>
+                                <input type="date" class="form-control" id="checkin_date" name="checkin_date" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="checkout_date" class="form-label">Дата виселення</label>
+                                <input type="date" class="form-control" id="checkout_date" name="checkout_date" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="room_type" class="form-label">Тип номеру</label>
+                                <select class="form-select" id="room_type" name="room_type" required>
+                                    <option value="" disabled selected>Виберіть тип номеру</option>
+                                    <option value="1">Один</option>
+                                    <option value="2">Два</option>
+                                    <option value="3">Студія</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="guests" class="form-label">Кількість гостей</label>
+                                <input type="number" class="form-control" id="guests" name="guests" required min="1" max="4">
+                            </div>
+                            <div class="mb-3">
+                                <label for="services" class="form-label">Додаткові послуги</label><br>
+                                <input type="checkbox" name="services" value="breakfast"> Сніданок<br>
+                                <input type="checkbox" name="services" value="transfer"> Трансфер<br>
+                                <input type="checkbox" name="services" value="excursions"> Екскурсії<br>
+                            </div>
+                            <div class="mb-3">
+                                <label for="comments" class="form-label">Побажання</label>
+                                <textarea class="form-control" id="comments" name="comments"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Забронювати</button>
+                        </form>
+                        
+                        
+                    </td>
+                </tr>
+                
+            
+                <!--9-->
+                <tr>
+                    <td>
+                        <table style="width: 915px; height: 150px; background-color:lightgray; display: flex; justify-content: center; align-items: center;">
+                            <tr><td style="display: flex; align-items: end;">
+                                <div style="display: flex; justify-content: space-between; width: 90px; margin-right: 10px;">
+                                    <div style="width: 20px; height: 20px; background-color: lightgray; box-shadow: 0 10px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);"></div>
+                                    <div style="width: 20px; height: 20px; background-color: lightgray; box-shadow: 0 10px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);"></div>
+                                    <div style="width: 20px; height: 20px; background-color: lightgray; box-shadow: 0 10px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);"></div>
+                                </div>
+                                <span style="font-size: 25px; box-shadow: 0 10px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);">Всі права захищені "Marble" c 2024</span>
+                                <div style="display: flex; justify-content: space-between; width: 90px; margin-left: 10px;">
+                                    <div style="width: 20px; height: 20px; background-color: lightgray; box-shadow: 0 10px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);"></div>
+                                    <div style="width: 20px; height: 20px; background-color: lightgray; box-shadow: 0 10px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);"></div>
+                                    <div style="width: 20px; height: 20px; background-color: lightgray; box-shadow: 0 10px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);"></div>
+                                </div>
+                            </td></tr>
+                        </table>
+                    </td>
+                </tr>
+
+            </table>
+        </div>
+    </body>
+
+</html>
